@@ -17,3 +17,12 @@ class LinkedList:
         new_node = Node(data)
         new_node.ref = self.start_node
         self.start_node = new_node
+
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if self.start_node is None:
+            self.start_node = new_node
+            n = self.start_node
+            while n.ref is not None:
+                n = n.ref
+            n.ref = new_node
