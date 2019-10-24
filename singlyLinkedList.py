@@ -34,3 +34,5 @@ class Linked_List:
 
 singly_1 = Linked_List()
 singly_1.add_item(2)
+
+singly_1.display()
