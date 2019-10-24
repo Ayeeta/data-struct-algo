@@ -26,3 +26,10 @@ class LinkedList:
             while n.ref is not None:
                 n = n.ref
             n.ref = new_node
+
+
+a = LinkedList()
+a.insert_at_start(2)
+a.insert_at_start(4)
+a.insert_at_start(3)
+a.traverse()

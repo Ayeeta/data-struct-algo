@@ -21,18 +21,23 @@ class Linked_List:
         while current_node.next != None:
             total += 1
             current_node = current_node.next
-        return total
+        print(total)
 
     def display(self):
-        linked_list = []
-        current_node = self.head
-        while current_node.next != None:
-            current_node = current_node.next
-            linked_list.append(current_node.data)
-        print(linked_list)
+        elems = []
+        cur_node = self.head
+        while cur_node.next != None:
+            cur_node = cur_node.next
+            
+            elems.append(cur_node.data)
+        print(elems)
+        
 
 
 singly_1 = Linked_List()
-singly_1.add_item(2)
 
-singly_1.display()
+singly_1.add_item(2)
+singly_1.add_item(4)
+singly_1.add_item(3)
+singly_1.length()
+
