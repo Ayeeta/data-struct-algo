@@ -15,4 +15,12 @@ def longest_substring(s):
     return max_s
 
 
-print(longest_substring("abcabcbb"))
+# print(longest_substring("abcabcbb"))
+s = "abbcd"
+subs= ""
+# for i in range(len(s)):
+#     subs += s[i]
+#     if 
+    
+    
+print(subs)
