@@ -5,6 +5,7 @@ def longestPalindrome(s):
     for word in res:
         if word == word[::-1]:
             pal_list[len(word)] = word
+        return "No palindrome found"
     
     last_key =  list(pal_list.keys())[-1]
     return pal_list[last_key]
