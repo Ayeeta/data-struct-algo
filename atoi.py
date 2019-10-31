@@ -17,7 +17,9 @@ def myAtoi(a):
         return within_range(int(x[0]))
 
 
-print(myAtoi("91283472332"))
+print(myAtoi("in words -42"))
+
+
 
 
 
