@@ -11,8 +11,39 @@ def int_rom(x):
             return rom_dict[x]
         j = x - y
         return rom_dict[j] + rom_dict[y]
+    if len(str(x)) == 3:
+        y = x % 100
+        if y == 0:
+            return rom_dict[x]
+        j = x - y
+        if len(str(y)) == 1:
+            return rom_dict[j] + rom_dict[y]
+        i = y % 10
+        a = y - i
+        return rom_dict[j] + rom_dict[a] + rom_dict[i]
+    if len(str(x)) == 4:
+        y = x % 1000
+        if y == 0:
+            return rom_dict[x]
+        j = x - y
+        if len(str(y)) == 1:
+            return rom_dict[j] + rom_dict[y]
+        if len(str(y)) == 2:
+            i = y % 10
+            a = y - i
+            return rom_dict[j] + rom_dict[a] + rom_dict[i]
+        if len(str(y)) == 3:
+            i = y % 100
+            if len(str(i)) == 1:
+                a = y - i
+                return rom_dict[j]+rom_dict[a] + rom_dict[i]
+            if len(str(i)) == 2:
+                a = y - i
+                b = i % 10
+                c = i - b
+                return rom_dict[j] + rom_dict[a] + rom_dict[c] + rom_dict[b]
     
 
-print(int_rom(53))
+print(int_rom(3999))
 
 #print(56%10)
