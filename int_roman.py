@@ -3,7 +3,16 @@ def int_rom(x):
                 20:'XX', 30:'XXX', 40:'XL', 50:'L', 60:'LX',70:'LXX', 80:'LXXX', 90:'XC', 100:'C',
                 200:'CC', 300:'CCC', 400:'CD', 500:'D', 600:'DC', 700:'DCC', 800:'DCCC',900:'CM', 1000:'M',
                 2000:'MM',3000:'MMM'}
-    if x in range(1,11):
+    if len(str(x)) == 1:
         return rom_dict[x]
+    if len(str(x)) == 2:
+        y = x % 10
+        if y == 0:
+            return rom_dict[x]
+        j = x - y
+        return rom_dict[j] + rom_dict[y]
+    
 
-print(int_rom(5))
+print(int_rom(53))
+
+#print(56%10)
