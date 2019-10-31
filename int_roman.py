@@ -44,6 +44,4 @@ def int_rom(x):
                 return rom_dict[j] + rom_dict[a] + rom_dict[c] + rom_dict[b]
     
 
-print(int_rom(3999))
-
-#print(56%10)
+print(int_rom(399))
