@@ -20,13 +20,3 @@ def int_rom(num):
 
 
 print(int_rom(1200))
-
-    
-        
-    
-
-# print(int_rom(56))
-
-
-
-#fix condition 110 1110
