@@ -16,3 +16,11 @@ def non_repeating(arr):
                 
 
 print(non_repeating([8,3,2,4,1,2,8,6,9,2]))
+
+
+#merge two sorted arrays
+
+def merge_arr(arr_a, arr_b):
+    return sorted(arr_a + arr_b)
+
+print(merge_arr([3,2,1], [1,2,3]))
