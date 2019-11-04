@@ -24,3 +24,12 @@ def merge_arr(arr_a, arr_b):
     return sorted(arr_a + arr_b)
 
 print(merge_arr([3,2,1], [1,2,3]))
+
+
+#arrange +ve and -ve alone
+def arrange_only(arr):
+    positve_vals = [x for x in arr if x >= 0]
+    negative_vals = [y for y in arr if y < 0]
+    return sorted(negative_vals) + sorted(positve_vals)
+
+print(arrange_only([3,2,4,-1,3,-5,0]))
