@@ -8,5 +8,14 @@ def get_indices(arr, limit):
 
 arr = [4, 6, 10, 15, 16]
 lim = 21
-print(get_indices([12,6,7,14,19,3,0,25,40], 7))
+# print(get_indices([12,6,7,14,19,3,0,25,40], 7))
 
+def get_weights(arr, limit):
+    
+    for i in range(len(arr)):
+        x = limit - arr[i]
+        if x in arr[i+1:]:
+            return [i, arr[i+1:].index(x)+i+1]
+
+
+print(get_weights(arr, lim))
