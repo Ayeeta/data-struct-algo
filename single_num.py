@@ -4,14 +4,14 @@ def single_number(nums):
         if nums.count(nums[i]) == 1:
             return nums[i]
 
-#efficient
+#soln 1
 def single_number2(nums):
     dups = []
-    for i in range(len(nums)):
+    for i in nums:
         if i not in dups:
             dups.append(i)
         else:
             dups.remove(i)
     return dups.pop()
 
-print(single_number2([4,1,2,1,2]))
+print(single_number2([2,2,1]))
