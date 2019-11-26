@@ -9,4 +9,15 @@ def min_max(arr):
         else:
             return 0
 
-print(min_max([]))
+
+def maxProfit(self, prices):
+        min=6666666
+        maxprofit=0
+        for i in range(len(prices)):
+            if prices[i]<min:
+                min=prices[i]
+            elif maxprofit<prices[i]-min:
+                maxprofit=prices[i]-min
+        return maxprofit
+
+print(min_max([2,4,1]))
