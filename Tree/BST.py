@@ -34,6 +34,15 @@ class Node:
             else:
                 return False
 
+    def preorder(self):
+        if self:
+            print(str(self.value))
+            if self.leftChild:
+                self.leftChild.preorder()
+            if self.rightChild:
+                self.rightChild.preorder()
+
+
 
 class Tree:
     def __init__(self):
@@ -51,3 +60,7 @@ class Tree:
             return self.root.find(data)
         else:
             return False
+
+    def preorder(self):
+        print("Pre Order")
+        self.root.preorder()
