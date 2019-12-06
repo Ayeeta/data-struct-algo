@@ -42,6 +42,14 @@ class Node:
             if self.rightChild:
                 self.rightChild.preorder()
 
+    def inorder(self):
+        if self:
+            if self.leftChild:
+                self.leftChild.inorder()
+            print(str(self.value))
+            if self.rightChild:
+                self.rightChild.inorder()
+
 
 
 class Tree:
@@ -64,3 +72,9 @@ class Tree:
     def preorder(self):
         print("Pre Order")
         self.root.preorder()
+
+    def inorder(self):
+        print("In-Order")
+        self.root.inorder()
+
+    
