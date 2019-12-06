@@ -50,6 +50,14 @@ class Node:
             if self.rightChild:
                 self.rightChild.inorder()
 
+    def postorder(self):
+        if self:
+            if self.leftChild:
+                self.leftChild.postorder()
+            if self.rightChild:
+                self.rightChild.postorder()
+            print(str(self.value))
+
 
 
 class Tree:
@@ -77,4 +85,6 @@ class Tree:
         print("In-Order")
         self.root.inorder()
 
-    
+    def postorder(self):
+        print("Post-Order")
+        self.root.postorder()
