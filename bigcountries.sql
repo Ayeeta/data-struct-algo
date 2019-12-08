@@ -1,0 +1,1 @@
+select name, population, area from countries where area > 3000000;

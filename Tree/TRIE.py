@@ -1,4 +1,8 @@
 class Trie:
+    """
+    Operaions: O(K) K - length of string
+    complexity for both space and time
+    """
     head = {}
 
     def add(self, word):
@@ -21,4 +25,3 @@ class Trie:
             return True
         else:
             return False
-        
