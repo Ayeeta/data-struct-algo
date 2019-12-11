@@ -11,3 +11,5 @@ def countways(n):
         return countways(n-1) + countways(n-2) + countways(n-3)
 
 print(countways(4))
+
+print(5//3)
