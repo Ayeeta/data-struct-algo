@@ -24,5 +24,3 @@ def fizzBuzz(n):
             print("Buzz")
         else:
             print(i)
-
-if __name__ == '__main__':
