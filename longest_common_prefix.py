@@ -11,4 +11,4 @@ def longest_prefix(strs):
 
 x = ['flower', 'flow', 'flowed']
 
-print(longest_prefix(x))
+print(min(x, key=len))

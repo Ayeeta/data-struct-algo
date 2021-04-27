@@ -6,5 +6,5 @@ def length_of_last_word(S):
         return len(S.split()[l-1])
 
 
-s = "Hello"
+s = "Hello worlds fo"
 print(length_of_last_word(s))
