@@ -11,8 +11,16 @@
 def checkMagazine(magazine, note):
     magazineDict = {}
     mag = magazine.split()
-    for i in range(len(mag)):
-        magazineDict[mag[i]] = mag.count(mag[i])
-    return magazineDict
+    rnote = note.split()
+    check = all(word in mag for word in rnote)
+    if check is True:
+        for i in range(len(mag)):
+            magazineDict[mag[i]] = mag.count(mag[i])
+        for i in range(len(rnote)):        
+            if rnote.count(rnote[i]) <= magazineDict[rnote[i]]:
+                return 'Yes'
+            return 'No'
+    return 'No'
+   
 
-print(checkMagazine("this is a two way street", "this is a two"))
+print(checkMagazine("give me one grand today night", "give one some grand today"))
