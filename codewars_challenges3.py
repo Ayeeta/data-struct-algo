@@ -1,25 +1,27 @@
+from urllib.parse import urlparse
+
 def non_repeating(string):  
-    count_list = []
-    print(string.isalpha())
-    if string.isalpha() == True:
-        l = string.lower()
-        for i in range(len(l)):
-            if l.count(l[i]) == 1:
-                return string[i]
-    for l in string:
-        print(l)
-        if l.isalpha():
-            print(l)
-            if string.count(l.lower()) == 1:
-                return l
-        if string.count(l) == 1:
-            return l
-           
-        
-    
-    
-    
+    x = string.lower()
+    for i in range(len(x)):
+        if x.count(x[i]) == 1:
+            return string[i]   
 
     
 
-print(non_repeating('Go hang a salami, I\'m a lasagna hog!'))
+#print(non_repeating('Go hang a salami, I\'m a lasagna hog!'))
+
+def domain_name(url):
+    # domain_url = urlparse(url).netloc
+    # print(domain_url)
+    if url[0:3] == 'www':
+        return url.split('.')[1]
+    elif url[0:3] != 'http':
+        return url.split('.')[0]
+    domain_url = urlparse(url).netloc
+    if domain_url[0:3] == 'www':
+        return domain_url.split('.')[1]
+    return domain_url.split('.')[0]
+
+
+print(domain_name("github.com"))
+    
