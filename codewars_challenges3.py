@@ -24,4 +24,15 @@ def domain_name(url):
 
 
 print(domain_name("github.com"))
+
+def res
+
+def format_duration(duration_seconds):    
+    hours, reminder = divmod(duration_seconds, 3600)
+    minutes, seconds = divmod(reminder, 60)
+    
+    print('{} hours {} minutes {} seconds'.format(hours, minutes, seconds))
+
+
+format_duration(2)
     

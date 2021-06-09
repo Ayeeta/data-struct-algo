@@ -11,15 +11,14 @@ class SearchByTag:
         return self._data['items']   
    
     def first(self):      
-        x = (y for y in self._data['items'] if self.query in y['tags'])
-        return list(x)[0]       
+        movies = self.search()
+        for movie in movies:
+            return movie      
 
     def search(self):
         for item in self._data['items']:
             if self.query in item['tags']:
                 yield item
-
-                
                 
         
 
@@ -29,5 +28,6 @@ searched = SearchByTag('data_json.json', '70s')
 a = searched.data()
 b = searched.search()
 c = searched.first()
-for i in b:
-    print(i)
+b
+# for i in b:
+#     print(i)
