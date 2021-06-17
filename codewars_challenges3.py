@@ -32,5 +32,30 @@ def format_duration(duration_seconds):
     print('{} hours {} minutes {} seconds'.format(hours, minutes, seconds))
 
 
-format_duration(2)
-    
+# format_duration(2)
+
+def scramble(str1, str2):
+    str3 = ''
+    for l in str2:
+        if l in str1 and str2.count(l) <= str1.count(l):
+            str3 += l        
+    print(str3)
+    if str3 == str2:
+        return True
+    return False
+# print(scramble('cedewaraaossoqqyt', 'codewars'))
+
+def pig_it(sentence):
+    sentence = sentence.split()
+    sent = []
+    for word in sentence:
+        if word.isalpha() == True:
+            w = word[1:]
+            sent.append(w + word[0] +'ay')
+        sent.append(word) 
+    for w in sent:
+        if w.isalpha() and w in sentence:
+            sent.remove(w)  
+    return ' '.join(sent)    
+
+print(pig_it('Panem et circenses'))
