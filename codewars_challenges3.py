@@ -1,4 +1,5 @@
 from urllib.parse import urlparse
+import re
 
 def non_repeating(string):  
     x = string.lower()
@@ -59,3 +60,8 @@ def pig_it(sentence):
     return ' '.join(sent)    
 
 print(pig_it('Panem et circenses'))
+
+
+#top_3 words. put the string in a set
+#  and count the occurances of each word in a dictionary
+#  return the list of dict keys with highest count
