@@ -65,3 +65,11 @@ print(pig_it('Panem et circenses'))
 #top_3 words. put the string in a set
 #  and count the occurances of each word in a dictionary
 #  return the list of dict keys with highest count
+
+def move_zeros(array):
+    # iterate 
+    # if value=0
+    # pop value 
+    # append pop value
+    # return array
+    pass
